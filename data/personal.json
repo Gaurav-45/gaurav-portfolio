@@ -1,0 +1,26 @@
+{
+  "personalInfo": {
+    "name": "Gaurav Parulekar",
+    "title": "Software Engineer",
+    "location": "Mumbai, India",
+    "email": "gauravparulekar@example.com",
+    "phone": "+91 XXXXX XXXXX",
+    "bio": "Passionate Full Stack Engineer with 2.5+ years of experience building scalable web applications and innovative solutions. Specialized in modern web technologies, cloud infrastructure, and creating exceptional user experiences.",
+    "profileImage": "/images/profile-placeholder.jpg",
+    "resumeLink": "https://drive.google.com/file/d/1BMNutwyzNWjmH3JKB7AivmRSgsyQTYFY/view?usp=drive_link"
+  },
+  "rotatingTitles": [
+    "Full Stack Engineer",
+    "Software Engineer @ Barclays",
+    "Frontend Developer",
+    "Backend Developer",
+    "Open Source Contributor",
+    "Problem Solver"
+  ],
+  "socialLinks": {
+    "linkedin": "https://www.linkedin.com/in/gaurav-parulekar-80a1aa217/",
+    "github": "https://github.com/Gaurav-45",
+    "leetcode": "https://leetcode.com/Gaurav-45",
+    "email": "mailto:gauravparulekar@example.com"
+  }
+}

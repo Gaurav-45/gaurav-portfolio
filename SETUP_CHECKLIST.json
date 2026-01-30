@@ -1,0 +1,62 @@
+{
+  "scripts": {
+    "setup": "Instructions for setting up your portfolio",
+    "steps": [
+      {
+        "step": 1,
+        "title": "Add Your Professional Photo",
+        "action": "Download your photo from LinkedIn and save it to /public/images/profile-photo.jpg",
+        "file": "data/personal.json",
+        "update": "Change 'profileImage' to '/images/profile-photo.jpg'"
+      },
+      {
+        "step": 2,
+        "title": "Update Contact Information",
+        "action": "Add your real email and phone number",
+        "file": "data/personal.json",
+        "fields": ["email", "phone"]
+      },
+      {
+        "step": 3,
+        "title": "Verify LinkedIn Data",
+        "action": "Cross-check all experience and project details with your LinkedIn profile",
+        "files": ["data/experience.json", "data/projects.json"]
+      },
+      {
+        "step": 4,
+        "title": "Add Project Screenshots",
+        "action": "Take screenshots of your projects and add them to /public/images/projects/",
+        "note": "Recommended size: 1200x630px"
+      },
+      {
+        "step": 5,
+        "title": "Test Everything",
+        "action": "Click all links, test forms, and verify animations work smoothly"
+      },
+      {
+        "step": 6,
+        "title": "Deploy to Vercel",
+        "commands": [
+          "git init",
+          "git add .",
+          "git commit -m 'Initial portfolio commit'",
+          "git push to GitHub",
+          "Import to Vercel and deploy"
+        ]
+      }
+    ],
+    "dataFiles": {
+      "personal.json": "Personal info, social links, rotating titles",
+      "experience.json": "Work experience with detailed descriptions",
+      "projects.json": "All your projects with technologies and links",
+      "skills.json": "Skills organized by categories with proficiency levels",
+      "achievements.json": "Hackathon wins, certifications, and awards"
+    },
+    "quickLinks": {
+      "localhost": "http://localhost:3000",
+      "github": "https://github.com/Gaurav-45",
+      "linkedin": "https://www.linkedin.com/in/gaurav-parulekar-80a1aa217/",
+      "resume": "https://drive.google.com/file/d/1BMNutwyzNWjmH3JKB7AivmRSgsyQTYFY/view?usp=drive_link"
+    }
+  }
+}

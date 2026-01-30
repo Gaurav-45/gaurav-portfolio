@@ -1,0 +1,83 @@
+[
+  {
+    "id": "1",
+    "company": "Barclays",
+    "position": "Software Engineer",
+    "location": "Pune, India",
+    "duration": "July 2023 - Present",
+    "type": "Full-time",
+    "description": "Working on enterprise-level financial applications, implementing scalable solutions and modernizing legacy systems.",
+    "responsibilities": [
+      "Developing and maintaining microservices architecture for banking applications",
+      "Implementing secure APIs and integrating with third-party financial services",
+      "Collaborating with cross-functional teams to deliver high-quality software solutions",
+      "Optimizing application performance and ensuring code quality through rigorous testing",
+      "Contributing to technical documentation and knowledge sharing initiatives"
+    ],
+    "technologies": [
+      "React",
+      "Node.js",
+      "TypeScript",
+      "Java",
+      "Spring Boot",
+      "PostgreSQL",
+      "Docker",
+      "Kubernetes",
+      "AWS"
+    ],
+    "logo": "/images/logos/barclays.png"
+  },
+  {
+    "id": "2",
+    "company": "Persistent Systems",
+    "position": "Software Engineer Intern",
+    "location": "Pune, India",
+    "duration": "January 2023 - June 2023",
+    "type": "Internship",
+    "description": "Contributed to full-stack development projects and gained hands-on experience with enterprise software development practices.",
+    "responsibilities": [
+      "Developed responsive web applications using React and modern JavaScript frameworks",
+      "Built RESTful APIs and integrated with databases",
+      "Participated in code reviews and agile development processes",
+      "Collaborated with senior engineers to implement new features",
+      "Fixed bugs and improved application performance"
+    ],
+    "technologies": [
+      "React",
+      "JavaScript",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "Git"
+    ],
+    "logo": "/images/logos/persistent.png"
+  },
+  {
+    "id": "3",
+    "company": "Freelance / Open Source",
+    "position": "Full Stack Developer",
+    "location": "Remote",
+    "duration": "2021 - Present",
+    "type": "Contract",
+    "description": "Building innovative web applications and contributing to open-source projects, specializing in modern web technologies.",
+    "responsibilities": [
+      "Architecting and developing full-stack applications from concept to deployment",
+      "Creating intuitive user interfaces with focus on UX/UI best practices",
+      "Implementing blockchain and Web3 integrations",
+      "Contributing to open-source projects and community initiatives",
+      "Mentoring junior developers and sharing knowledge through technical blogs"
+    ],
+    "technologies": [
+      "React",
+      "Next.js",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "PostgreSQL",
+      "Solidity",
+      "Web3.js",
+      "Tailwind CSS"
+    ],
+    "logo": "/images/logos/freelance.png"
+  }
+]

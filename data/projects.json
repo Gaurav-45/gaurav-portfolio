@@ -1,0 +1,80 @@
+[
+  {
+    "id": "1",
+    "title": "Shrinkr - URL Shortener",
+    "description": "A powerful URL shortening service with analytics, custom aliases, and QR code generation. Built with modern web technologies for optimal performance.",
+    "longDescription": "Shrinkr is a comprehensive URL shortening platform that provides users with detailed analytics, custom short links, and QR code generation. Features include link expiration, password protection, and real-time click tracking.",
+    "image": "/images/projects/shrinkr.jpg",
+    "technologies": [
+      "Next.js",
+      "TypeScript",
+      "PostgreSQL",
+      "Prisma",
+      "Tailwind CSS",
+      "Vercel"
+    ],
+    "features": [
+      "Custom URL aliases with availability checking",
+      "Real-time analytics and click tracking",
+      "QR code generation for easy sharing",
+      "Link expiration and password protection",
+      "Responsive design with dark mode support"
+    ],
+    "github": "https://github.com/Gaurav-45/Shrinkr",
+    "live": null,
+    "category": "Web Application",
+    "featured": true
+  },
+  {
+    "id": "2",
+    "title": "MemeCasso - AI Meme Generator",
+    "description": "An AI-powered meme generation platform that creates hilarious memes using machine learning. Combines creativity with cutting-edge technology.",
+    "longDescription": "MemeCasso leverages advanced AI models to generate contextual and humorous memes. Users can input topics or themes, and the AI creates relevant memes with appropriate images and text.",
+    "image": "/images/projects/memecasso.jpg",
+    "technologies": [
+      "React",
+      "Python",
+      "Flask",
+      "OpenAI API",
+      "MongoDB",
+      "Docker"
+    ],
+    "features": [
+      "AI-powered meme text generation",
+      "Vast library of meme templates",
+      "Custom meme creation with user inputs",
+      "Social sharing capabilities",
+      "Community-driven meme voting system"
+    ],
+    "github": "https://github.com/Gaurav-45/MemeCasso",
+    "live": null,
+    "category": "AI/ML",
+    "featured": true
+  },
+  {
+    "id": "3",
+    "title": "Paathshala - E-Learning Platform",
+    "description": "A comprehensive e-learning platform connecting students with quality educational content. Features interactive courses, assessments, and progress tracking.",
+    "longDescription": "Paathshala is an innovative learning management system designed to make education accessible. It includes video lectures, quizzes, assignments, and a robust progress tracking system for both students and instructors.",
+    "image": "/images/projects/paathshala.jpg",
+    "technologies": [
+      "React",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "Socket.io",
+      "AWS S3"
+    ],
+    "features": [
+      "Interactive video courses with subtitles",
+      "Real-time quiz system with instant feedback",
+      "Progress tracking and certificates",
+      "Discussion forums for collaborative learning",
+      "Admin dashboard for course management"
+    ],
+    "github": "https://github.com/Gaurav-45/Paathshala",
+    "live": null,
+    "category": "Education",
+    "featured": true
+  }
+]

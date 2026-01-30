@@ -1,0 +1,52 @@
+[
+  {
+    "id": "1",
+    "title": "Odoo Combat 2024 Winner",
+    "organization": "Odoo",
+    "date": "2024",
+    "description": "Won the Odoo Combat 2024 hackathon competing against top developers across India",
+    "icon": "trophy",
+    "color": "purple",
+    "category": "Hackathon"
+  },
+  {
+    "id": "2",
+    "title": "ETHIndia 2024 - 2nd Runner-Up",
+    "organization": "ETHIndia (AnonAadhaar Track)",
+    "date": "2024",
+    "description": "Secured 2nd Runner-Up position at world's largest Ethereum hackathon in the AnonAadhaar track",
+    "icon": "award",
+    "color": "blue",
+    "category": "Hackathon"
+  },
+  {
+    "id": "3",
+    "title": "JPMC Code for Good 2022 Winner",
+    "organization": "JP Morgan Chase",
+    "date": "2022",
+    "description": "Won the prestigious Code for Good hackathon hosted by JP Morgan Chase",
+    "icon": "trophy",
+    "color": "green",
+    "category": "Hackathon"
+  },
+  {
+    "id": "4",
+    "title": "AWS Certified Cloud Practitioner",
+    "organization": "Amazon Web Services",
+    "date": "2023",
+    "description": "Certified AWS Cloud Practitioner demonstrating cloud computing expertise and best practices",
+    "icon": "certificate",
+    "color": "orange",
+    "category": "Certification"
+  },
+  {
+    "id": "5",
+    "title": "Open Source Contributor",
+    "organization": "GitHub",
+    "date": "2021 - Present",
+    "description": "Active contributor to various open-source projects with 100+ contributions",
+    "icon": "code",
+    "color": "purple",
+    "category": "Achievement"
+  }
+]
