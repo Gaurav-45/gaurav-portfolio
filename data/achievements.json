@@ -7,7 +7,8 @@
     "description": "Won 2nd prize at the Barclays 'Hack a Difference' hackathon by building an AI-powered solution to help Magic Bus NGO solve real-world social impact challenges.",
     "icon": "award",
     "color": "teal",
-    "category": "Hackathon"
+    "category": "Hackathon",
+    "image": "/images/achievements/barclays-hack.jpeg"
   },
   {
     "id": "1",
@@ -17,7 +18,8 @@
     "description": "Winner of Odoo Combat 2024, a national-level hackathon where the team built an interactive map-based criminal record system.",
     "icon": "trophy",
     "color": "purple",
-    "category": "Hackathon"
+    "category": "Hackathon",
+    "image": "/images/achievements/odoo-hack.jpg"
   },
   {
     "id": "2",
@@ -27,7 +29,8 @@
     "description": "Secured 2nd Runner-Up position at ETHIndia 2024, the world’s largest Ethereum hackathon, in the AnonAadhaar track.",
     "icon": "award",
     "color": "blue",
-    "category": "Hackathon"
+    "category": "Hackathon",
+    "image": "/images/achievements/eth-hack.jpg"
   },
   {
     "id": "3",

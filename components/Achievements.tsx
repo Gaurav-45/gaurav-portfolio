@@ -114,45 +114,80 @@ export default function Achievements() {
                     EARNED
                   </div>
 
-                  {/* Header with Icon */}
+                  {/* Header with Icon or Image */}
                   <div
-                    className={`bg-gradient-to-br ${getColorClass(achievement.color)} p-8 relative overflow-hidden`}
+                    className={`${(achievement as any).image ? "h-48" : "p-8"} bg-gradient-to-br ${getColorClass(achievement.color)} relative overflow-hidden`}
                   >
-                    {/* Animated background shapes */}
-                    <div className="absolute top-0 right-0 w-40 h-40 bg-white/5 rounded-full blur-3xl transform translate-x-16 -translate-y-16"></div>
-                    <div className="absolute bottom-0 left-0 w-32 h-32 bg-white/10 rounded-full blur-2xl transform -translate-x-10 translate-y-10"></div>
+                    {/* Show image if provided, otherwise show gradient with icon */}
+                    {(achievement as any).image ? (
+                      <>
+                        <img
+                          src={(achievement as any).image}
+                          alt={achievement.title}
+                          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                          onError={(e) => {
+                            e.currentTarget.style.display = "none";
+                          }}
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/50 to-transparent opacity-80 group-hover:opacity-70 transition-opacity"></div>
+                        <div className="absolute bottom-4 left-4 z-10">
+                          <span className="text-white/90 text-sm font-semibold bg-black/40 backdrop-blur-sm px-3 py-1.5 rounded-full">
+                            {achievement.date}
+                          </span>
+                        </div>
+                        <div className="absolute top-4 left-4 z-10 text-white drop-shadow-lg">
+                          <motion.div
+                            whileHover={{
+                              scale: 1.2,
+                              rotate: 360,
+                            }}
+                            transition={{ duration: 0.6 }}
+                            className="inline-block"
+                          >
+                            {getIcon(achievement.icon)}
+                          </motion.div>
+                        </div>
+                      </>
+                    ) : (
+                      <>
+                        {/* Animated background shapes */}
+                        <div className="absolute top-0 right-0 w-40 h-40 bg-white/5 rounded-full blur-3xl transform translate-x-16 -translate-y-16"></div>
+                        <div className="absolute bottom-0 left-0 w-32 h-32 bg-white/10 rounded-full blur-2xl transform -translate-x-10 translate-y-10"></div>
 
-                    <motion.div
-                      className="relative z-10 text-white mb-4"
-                      animate={{
-                        y: [0, -5, 0],
-                        rotate: [0, 5, -5, 0],
-                      }}
-                      transition={{
-                        duration: 4,
-                        repeat: Infinity,
-                        ease: "easeInOut",
-                        delay: index * 0.3,
-                      }}
-                    >
-                      <motion.div
-                        whileHover={{
-                          scale: 1.2,
-                          rotate: 360,
-                          filter: "drop-shadow(0 0 20px rgba(255,255,255,0.8))",
-                        }}
-                        transition={{ duration: 0.6 }}
-                        className="inline-block"
-                      >
-                        {getIcon(achievement.icon)}
-                      </motion.div>
-                    </motion.div>
+                        <motion.div
+                          className="relative z-10 text-white mb-4"
+                          animate={{
+                            y: [0, -5, 0],
+                            rotate: [0, 5, -5, 0],
+                          }}
+                          transition={{
+                            duration: 4,
+                            repeat: Infinity,
+                            ease: "easeInOut",
+                            delay: index * 0.3,
+                          }}
+                        >
+                          <motion.div
+                            whileHover={{
+                              scale: 1.2,
+                              rotate: 360,
+                              filter:
+                                "drop-shadow(0 0 20px rgba(255,255,255,0.8))",
+                            }}
+                            transition={{ duration: 0.6 }}
+                            className="inline-block"
+                          >
+                            {getIcon(achievement.icon)}
+                          </motion.div>
+                        </motion.div>
 
-                    <div className="relative z-10">
-                      <span className="text-white/90 text-sm font-semibold bg-black/20 px-3 py-1 rounded-full">
-                        {achievement.date}
-                      </span>
-                    </div>
+                        <div className="relative z-10">
+                          <span className="text-white/90 text-sm font-semibold bg-black/20 px-3 py-1 rounded-full">
+                            {achievement.date}
+                          </span>
+                        </div>
+                      </>
+                    )}
                   </div>
 
                   {/* Content */}

@@ -77,21 +77,32 @@ export default function Projects() {
                   <div className="relative h-48 bg-gradient-to-br from-primary-900/20 to-accent-purple/20 overflow-hidden">
                     {project.featured && (
                       <div className="absolute top-4 right-4 z-10">
-                        <span className="flex items-center px-3 py-1 bg-gradient-to-r from-primary-500 to-accent-purple rounded-full text-xs font-bold text-white">
+                        <span className="flex items-center px-3 py-1 bg-gradient-to-r from-primary-500 to-accent-purple rounded-full text-xs font-bold text-white shadow-lg">
                           <FaStar className="mr-1" /> Featured
                         </span>
                       </div>
                     )}
-                    <div className="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-60"></div>
-                    <div className="absolute inset-0 flex items-center justify-center">
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                      onError={(e) => {
+                        // Fallback to gradient background with emoji if image fails
+                        e.currentTarget.style.display = "none";
+                      }}
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/50 to-transparent opacity-80 group-hover:opacity-70 transition-opacity"></div>
+                    {/* Fallback icon if image doesn't load */}
+                    <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
                       <motion.div
-                        className="text-6xl text-primary-400 opacity-20"
+                        className="text-6xl text-primary-400 opacity-0"
                         animate={{ rotate: 360 }}
                         transition={{
                           duration: 20,
                           repeat: Infinity,
                           ease: "linear",
                         }}
+                        style={{ display: "none" }}
                       >
                         💻
                       </motion.div>

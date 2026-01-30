@@ -155,22 +155,32 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.4 }}
           >
             <div className="relative">
+              {/* Animated gradient ring */}
               <motion.div
-                className="w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full bg-gradient-to-br from-primary-500 via-accent-purple to-accent-green p-1 animate-glow"
+                className="absolute inset-0 w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full bg-gradient-to-br from-primary-500 via-accent-purple to-accent-green opacity-70 blur-2xl"
                 animate={{
-                  rotate: 360,
+                  scale: [1, 1.1, 1],
+                  opacity: [0.5, 0.8, 0.5],
                 }}
                 transition={{
-                  duration: 20,
+                  duration: 4,
                   repeat: Infinity,
-                  ease: "linear",
+                  ease: "easeInOut",
                 }}
+              />
+
+              <motion.div
+                className="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full bg-gradient-to-br from-primary-500 via-accent-purple to-accent-green p-1"
+                whileHover={{ scale: 1.05 }}
+                transition={{ duration: 0.3 }}
               >
-                <div className="w-full h-full rounded-full bg-gray-900 flex items-center justify-center overflow-hidden">
-                  <img
+                <div className="w-full h-full rounded-full bg-gray-900 flex items-center justify-center overflow-hidden border-4 border-gray-900 shadow-2xl">
+                  <motion.img
                     src={personalInfo.profileImage}
                     alt={personalInfo.name}
                     className="w-full h-full object-cover"
+                    whileHover={{ scale: 1.1 }}
+                    transition={{ duration: 0.5 }}
                     onError={(e) => {
                       // Fallback to placeholder
                       e.currentTarget.src =
@@ -179,6 +189,34 @@ export default function Hero() {
                   />
                 </div>
               </motion.div>
+
+              {/* Floating particles on circumference */}
+              {[...Array(8)].map((_, i) => {
+                const angle = (i / 8) * Math.PI * 2;
+                const radius = 50; // 50% from center to edge
+                return (
+                  <motion.div
+                    key={i}
+                    className="absolute w-3 h-3 bg-primary-400 rounded-full shadow-lg shadow-primary-400/50"
+                    style={{
+                      top: `${50 + Math.sin(angle) * radius}%`,
+                      left: `${50 + Math.cos(angle) * radius}%`,
+                      transform: "translate(-50%, -50%)",
+                    }}
+                    animate={{
+                      scale: [1, 1.5, 1],
+                      opacity: [0.4, 1, 0.4],
+                    }}
+                    transition={{
+                      duration: 2.5 + i * 0.15,
+                      repeat: Infinity,
+                      ease: "easeInOut",
+                      delay: i * 0.15,
+                    }}
+                  />
+                );
+              })}
+
               {/* Floating decorations */}
               <motion.div
                 className="absolute -top-4 -right-4 w-24 h-24 bg-primary-500/20 rounded-full blur-xl"
