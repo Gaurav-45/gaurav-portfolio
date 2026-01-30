@@ -6,78 +6,67 @@
     "location": "Pune, India",
     "duration": "July 2023 - Present",
     "type": "Full-time",
-    "description": "Working on enterprise-level financial applications, implementing scalable solutions and modernizing legacy systems.",
+    "description": "Software Engineer, building and maintaining enterprise-grade monitoring and automation platforms for large-scale financial systems.",
     "responsibilities": [
-      "Developing and maintaining microservices architecture for banking applications",
-      "Implementing secure APIs and integrating with third-party financial services",
-      "Collaborating with cross-functional teams to deliver high-quality software solutions",
-      "Optimizing application performance and ensuring code quality through rigorous testing",
-      "Contributing to technical documentation and knowledge sharing initiatives"
+      "Led end-to-end development of a real-time SLA–OLA monitoring platform providing unified visibility across 20+ teams and eliminating manual month-end reporting",
+      "Designed and built a Python-based job monitoring system with real-time alerts and auto-healing workflows, saving ~80 hours per month",
+      "Implemented auto-healing mechanisms to automatically restart critical Windows services, improving system uptime and reliability",
+      "Created Geneos samplers and dashboards to monitor 30+ applications, reducing incident resolution time by 40%",
+      "Contributed to shared frontend component libraries and improved CI/CD pipelines for zero-downtime deployments"
     ],
     "technologies": [
+      "Angular",
       "React",
-      "Node.js",
-      "TypeScript",
       "Java",
-      "Spring Boot",
+      "Python",
+      "Django",
+      "Node.js",
       "PostgreSQL",
       "Docker",
-      "Kubernetes",
-      "AWS"
+      "AWS",
+      "Geneos"
     ],
     "logo": "/images/logos/barclays.png"
   },
   {
     "id": "2",
-    "company": "Persistent Systems",
-    "position": "Software Engineer Intern",
-    "location": "Pune, India",
-    "duration": "January 2023 - June 2023",
-    "type": "Internship",
-    "description": "Contributed to full-stack development projects and gained hands-on experience with enterprise software development practices.",
+    "company": "Code4GovTech (C4GT)",
+    "position": "Open Source Contributor",
+    "location": "Remote",
+    "duration": "June 2025 - August 2025",
+    "type": "Open Source",
+    "description": "Contributed to large-scale open-source governance platforms under the Code4GovTech (C4GT) Education Initiative, focusing on frontend architecture, documentation, and developer experience.",
     "responsibilities": [
-      "Developed responsive web applications using React and modern JavaScript frameworks",
-      "Built RESTful APIs and integrated with databases",
-      "Participated in code reviews and agile development processes",
-      "Collaborated with senior engineers to implement new features",
-      "Fixed bugs and improved application performance"
+      "Selected among 4,200+ applicants nationwide to contribute to open-source governance platforms under the C4GT program",
+      "Integrated Storybook into a large Angular monorepo, reducing developer onboarding time by 70% and improving component reuse",
+      "Refactored and documented 30+ UI components to ensure design consistency and scalability aligned with updated Figma guidelines"
     ],
-    "technologies": [
-      "React",
-      "JavaScript",
-      "Node.js",
-      "Express",
-      "MongoDB",
-      "Git"
-    ],
-    "logo": "/images/logos/persistent.png"
+    "technologies": ["Angular", "TypeScript", "Storybook", "Figma", "Git"],
+    "logo": "/images/logos/c4gt.png"
   },
   {
     "id": "3",
-    "company": "Freelance / Open Source",
-    "position": "Full Stack Developer",
-    "location": "Remote",
-    "duration": "2021 - Present",
-    "type": "Contract",
-    "description": "Building innovative web applications and contributing to open-source projects, specializing in modern web technologies.",
+    "company": "Gupshup",
+    "position": "Software Development Engineer Intern",
+    "location": "Remote / India",
+    "duration": "January 2022 - July 2022",
+    "type": "Internship",
+    "description": "Worked on multiple frontend and internal tooling projects at a unicorn startup, contributing to large-scale web platforms, automation, and content management systems.",
     "responsibilities": [
-      "Architecting and developing full-stack applications from concept to deployment",
-      "Creating intuitive user interfaces with focus on UX/UI best practices",
-      "Implementing blockchain and Web3 integrations",
-      "Contributing to open-source projects and community initiatives",
-      "Mentoring junior developers and sharing knowledge through technical blogs"
+      "Contributed to Gupshup’s re-branded website by fixing bugs and enhancing the internal component library",
+      "Built a Next.js-based internationalization (i18n) POC to render localized content based on user location",
+      "Developed internal tools including a career bot, secure content migration apps, and JSON-to-Strapi data pipelines",
+      "Implemented Cypress-based web automation to validate complex form workflows and detect bugs at scale"
     ],
     "technologies": [
       "React",
       "Next.js",
+      "JavaScript",
       "Node.js",
-      "Express",
-      "MongoDB",
-      "PostgreSQL",
-      "Solidity",
-      "Web3.js",
-      "Tailwind CSS"
+      "Strapi",
+      "Cypress",
+      "Git"
     ],
-    "logo": "/images/logos/freelance.png"
+    "logo": "/images/logos/gupshup.png"
   }
 ]

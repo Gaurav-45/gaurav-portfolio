@@ -9,119 +9,136 @@ export default function Skills() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
+  const categoryGradients = [
+    "from-blue-500/10 to-purple-500/10",
+    "from-purple-500/10 to-pink-500/10",
+    "from-green-500/10 to-emerald-500/10",
+    "from-orange-500/10 to-red-500/10",
+  ];
+
+  const categoryBorderColors = [
+    "from-blue-500/20 to-purple-500/20",
+    "from-purple-500/20 to-pink-500/20",
+    "from-green-500/20 to-emerald-500/20",
+    "from-orange-500/20 to-red-500/20",
+  ];
+
+  const categoryAccentColors = [
+    "from-blue-500 to-purple-500",
+    "from-purple-500 to-pink-500",
+    "from-green-500 to-emerald-500",
+    "from-orange-500 to-red-500",
+  ];
+
   return (
-    <section id="skills" className="relative py-20 bg-black" ref={ref}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section
+      id="skills"
+      ref={ref}
+      className="py-20 px-4 bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 relative overflow-hidden"
+    >
+      {/* Animated background elements */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-20 -left-20 w-96 h-96 bg-primary-500/5 rounded-full blur-3xl animate-float"></div>
+        <div className="absolute bottom-20 -right-20 w-96 h-96 bg-accent-purple/5 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }}></div>
+      </div>
+
+      <div className="container mx-auto max-w-6xl relative z-10">
         <motion.div
-          initial={{ opacity: 0, y: 50 }}
+          initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
+          className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-4">
-            Skills & <span className="text-gradient">Technologies</span>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+            <span className="text-gradient">Technical Skills</span>
           </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-primary-500 to-accent-purple mx-auto mb-8"></div>
-          <p className="text-gray-400 text-center max-w-2xl mx-auto mb-16">
-            Technologies I work with to build cutting-edge solutions
+          <p className="text-gray-400 text-lg">
+            Technologies I work with
           </p>
+        </motion.div>
 
-          <div className="space-y-12">
-            {skillsData.categories.map((category, catIndex) => (
-              <motion.div
-                key={category.name}
-                initial={{ opacity: 0, y: 30 }}
-                animate={isInView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.6, delay: catIndex * 0.15 }}
-              >
-                <h3 className="text-xl font-bold text-white mb-6 flex items-center">
-                  <span className="text-primary-400 mr-3">{"<"}</span>
+        <div className="space-y-12">
+          {skillsData.categories.map((category, categoryIndex) => (
+            <motion.div
+              key={category.name}
+              initial={{ opacity: 0, y: 20 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.6, delay: categoryIndex * 0.1 }}
+              className={`bg-gradient-to-br ${categoryGradients[categoryIndex % categoryGradients.length]} backdrop-blur-sm rounded-2xl p-6 md:p-8 border border-gray-700/30 relative overflow-hidden group`}
+            >
+              {/* Shine effect */}
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
+              
+              <div className="relative z-10">
+                <h3 className="text-2xl font-bold text-white mb-6 flex items-center">
+                  <motion.span 
+                    className={`w-2 h-8 bg-gradient-to-b ${categoryAccentColors[categoryIndex % categoryAccentColors.length]} mr-3 rounded-full`}
+                    animate={{
+                      scaleY: [1, 1.2, 1],
+                    }}
+                    transition={{
+                      duration: 2,
+                      repeat: Infinity,
+                      ease: "easeInOut",
+                      delay: categoryIndex * 0.2,
+                    }}
+                  ></motion.span>
                   {category.name}
-                  <span className="text-primary-400 ml-3">{"/>"}</span>
-                  <div className="flex-1 h-px bg-gradient-to-r from-primary-500/50 to-transparent ml-6"></div>
                 </h3>
 
-                <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
-                  {category.skills.map((skill, skillIndex) => (
+                <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-4">
+                  {category.skills.map((tech, index) => (
                     <motion.div
-                      key={skill.name}
-                      initial={{ opacity: 0, scale: 0.8 }}
+                      key={tech.name}
+                      initial={{ opacity: 0, scale: 0.5 }}
                       animate={isInView ? { opacity: 1, scale: 1 } : {}}
                       transition={{
                         duration: 0.4,
-                        delay: catIndex * 0.15 + skillIndex * 0.03,
+                        delay: categoryIndex * 0.1 + index * 0.05,
                       }}
-                      whileHover={{ scale: 1.1, y: -5 }}
-                      className="group"
+                      whileHover={{
+                        scale: 1.15,
+                        y: -8,
+                        rotateY: 10,
+                      }}
+                      className={`bg-gradient-to-br from-gray-800/90 to-gray-900/90 p-4 rounded-xl border bg-gradient-to-br ${categoryBorderColors[categoryIndex % categoryBorderColors.length]} hover:shadow-xl hover:shadow-primary-500/20 transition-all duration-300 group/item cursor-pointer backdrop-blur-sm relative overflow-hidden`}
+                      style={{
+                        transformStyle: 'preserve-3d',
+                      }}
                     >
-                      <div className="bg-gray-800/30 backdrop-blur-sm border border-primary-900/20 rounded-xl p-4 text-center card-glow flex flex-col items-center justify-center">
-                        {/* Tech Logo */}
-                        <motion.div
-                          className="w-12 h-12 mb-3 flex items-center justify-center"
-                          whileHover={{ rotate: 360 }}
-                          transition={{ duration: 0.6 }}
+                      {/* Gradient overlay on hover */}
+                      <div className={`absolute inset-0 bg-gradient-to-br ${categoryGradients[categoryIndex % categoryGradients.length]} opacity-0 group-hover/item:opacity-100 transition-opacity duration-300 rounded-xl`}></div>
+                      
+                      <div className="flex flex-col items-center space-y-2 relative z-10">
+                        <motion.div 
+                          className="w-12 h-12 relative"
+                          animate={{
+                            y: [0, -5, 0],
+                          }}
+                          transition={{
+                            duration: 3,
+                            repeat: Infinity,
+                            ease: "easeInOut",
+                            delay: index * 0.1,
+                          }}
                         >
                           <img
-                            src={skill.icon}
-                            alt={skill.name}
-                            className="w-full h-full object-contain filter brightness-90 group-hover:brightness-110 transition-all"
-                            onError={(e) => {
-                              // Fallback to colored div with initial
-                              e.currentTarget.style.display = "none";
-                              const fallback = e.currentTarget
-                                .nextElementSibling as HTMLElement;
-                              if (fallback) fallback.style.display = "flex";
-                            }}
+                            src={tech.icon}
+                            alt={tech.name}
+                            className="w-full h-full object-contain group-hover/item:drop-shadow-[0_0_8px_rgba(14,165,233,0.5)] transition-all duration-300"
                           />
-                          <div className="w-full h-full bg-gradient-to-br from-primary-500 to-accent-purple rounded-lg items-center justify-center text-white font-bold text-2xl hidden">
-                            {skill.name.charAt(0)}
-                          </div>
                         </motion.div>
-
-                        {/* Skill Name */}
-                        <h4 className="text-white text-sm font-medium group-hover:text-primary-400 transition-colors">
-                          {skill.name}
-                        </h4>
+                        <span className="text-gray-300 text-xs font-medium text-center group-hover/item:text-white transition-colors">
+                          {tech.name}
+                        </span>
                       </div>
                     </motion.div>
                   ))}
                 </div>
-              </motion.div>
-            ))}
-          </div>
-
-          {/* Additional Skills Section */}
-          <motion.div
-            className="mt-16 text-center"
-            initial={{ opacity: 0 }}
-            animate={isInView ? { opacity: 1 } : {}}
-            transition={{ duration: 0.6, delay: 1 }}
-          >
-            <p className="text-gray-400 mb-4">Also experienced with:</p>
-            <div className="flex flex-wrap justify-center gap-3">
-              {[
-                "REST APIs",
-                "GraphQL",
-                "OAuth",
-                "JWT",
-                "CI/CD",
-                "Agile",
-                "Unit Testing",
-                "Jest",
-              ].map((tech, index) => (
-                <motion.span
-                  key={tech}
-                  className="px-4 py-2 bg-gray-800/50 border border-gray-700/50 rounded-lg text-gray-300 text-sm hover:border-primary-500/50 hover:text-primary-400 transition-all"
-                  initial={{ opacity: 0, scale: 0 }}
-                  animate={isInView ? { opacity: 1, scale: 1 } : {}}
-                  transition={{ duration: 0.3, delay: 1.2 + index * 0.05 }}
-                  whileHover={{ scale: 1.1 }}
-                >
-                  {tech}
-                </motion.span>
-              ))}
-            </div>
-          </motion.div>
-        </motion.div>
+              </div>
+            </motion.div>
+          ))}
+        </div>
       </div>
     </section>
   );

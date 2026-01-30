@@ -1,20 +1,30 @@
 [
   {
+    "id": "5",
+    "title": "Barclays Hack a Difference – 2nd Prize Winner",
+    "organization": "Barclays",
+    "date": "2025",
+    "description": "Won 2nd prize at the Barclays 'Hack a Difference' hackathon by building an AI-powered solution to help Magic Bus NGO solve real-world social impact challenges.",
+    "icon": "award",
+    "color": "teal",
+    "category": "Hackathon"
+  },
+  {
     "id": "1",
     "title": "Odoo Combat 2024 Winner",
     "organization": "Odoo",
     "date": "2024",
-    "description": "Won the Odoo Combat 2024 hackathon competing against top developers across India",
+    "description": "Winner of Odoo Combat 2024, a national-level hackathon where the team built an interactive map-based criminal record system.",
     "icon": "trophy",
     "color": "purple",
     "category": "Hackathon"
   },
   {
     "id": "2",
-    "title": "ETHIndia 2024 - 2nd Runner-Up",
+    "title": "ETHIndia 2024 – 2nd Runner-Up",
     "organization": "ETHIndia (AnonAadhaar Track)",
     "date": "2024",
-    "description": "Secured 2nd Runner-Up position at world's largest Ethereum hackathon in the AnonAadhaar track",
+    "description": "Secured 2nd Runner-Up position at ETHIndia 2024, the world’s largest Ethereum hackathon, in the AnonAadhaar track.",
     "icon": "award",
     "color": "blue",
     "category": "Hackathon"
@@ -24,7 +34,7 @@
     "title": "JPMC Code for Good 2022 Winner",
     "organization": "JP Morgan Chase",
     "date": "2022",
-    "description": "Won the prestigious Code for Good hackathon hosted by JP Morgan Chase",
+    "description": "Winner of JP Morgan Chase’s Code for Good hackathon, building a technology-driven solution for a real-world social impact problem.",
     "icon": "trophy",
     "color": "green",
     "category": "Hackathon"
@@ -33,20 +43,10 @@
     "id": "4",
     "title": "AWS Certified Cloud Practitioner",
     "organization": "Amazon Web Services",
-    "date": "2023",
-    "description": "Certified AWS Cloud Practitioner demonstrating cloud computing expertise and best practices",
+    "date": "2025",
+    "description": "Earned AWS Certified Cloud Practitioner certification, demonstrating foundational cloud knowledge across core AWS services, security, and architecture.",
     "icon": "certificate",
     "color": "orange",
     "category": "Certification"
-  },
-  {
-    "id": "5",
-    "title": "Open Source Contributor",
-    "organization": "GitHub",
-    "date": "2021 - Present",
-    "description": "Active contributor to various open-source projects with 100+ contributions",
-    "icon": "code",
-    "color": "purple",
-    "category": "Achievement"
   }
 ]

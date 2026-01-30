@@ -1,79 +1,72 @@
 [
   {
     "id": "1",
-    "title": "Shrinkr - URL Shortener",
-    "description": "A powerful URL shortening service with analytics, custom aliases, and QR code generation. Built with modern web technologies for optimal performance.",
-    "longDescription": "Shrinkr is a comprehensive URL shortening platform that provides users with detailed analytics, custom short links, and QR code generation. Features include link expiration, password protection, and real-time click tracking.",
+    "title": "Shrinkr – Serverless URL Shortener",
+    "description": "A fully serverless URL shortener supporting custom aliases, QR code generation, and scalable link redirection.",
+    "longDescription": "Shrinkr is a production-ready, serverless URL shortening platform designed for scalability and zero infrastructure management. It supports custom short links, QR code generation, and seamless redirection using AWS-managed services.",
     "image": "/images/projects/shrinkr.jpg",
     "technologies": [
-      "Next.js",
-      "TypeScript",
-      "PostgreSQL",
-      "Prisma",
-      "Tailwind CSS",
-      "Vercel"
+      "React",
+      "Node.js",
+      "AWS Lambda",
+      "API Gateway",
+      "DynamoDB",
+      "S3"
     ],
     "features": [
-      "Custom URL aliases with availability checking",
-      "Real-time analytics and click tracking",
-      "QR code generation for easy sharing",
-      "Link expiration and password protection",
-      "Responsive design with dark mode support"
+      "Custom short URL aliases",
+      "QR code generation for shortened links",
+      "Serverless architecture with automatic scaling",
+      "Low-latency URL redirection",
+      "Zero infrastructure management using AWS"
     ],
     "github": "https://github.com/Gaurav-45/Shrinkr",
-    "live": null,
+    "live": "http://shrinkr-frontend.s3-website-us-east-1.amazonaws.com/",
     "category": "Web Application",
     "featured": true
   },
   {
     "id": "2",
-    "title": "MemeCasso - AI Meme Generator",
-    "description": "An AI-powered meme generation platform that creates hilarious memes using machine learning. Combines creativity with cutting-edge technology.",
-    "longDescription": "MemeCasso leverages advanced AI models to generate contextual and humorous memes. Users can input topics or themes, and the AI creates relevant memes with appropriate images and text.",
+    "title": "MemeCasso – AI Meme Bot",
+    "description": "An autonomous AI-powered bot that understands post context and replies with relevant memes without manual intervention.",
+    "longDescription": "MemeCasso is an AI-driven bot built for Bluesky that analyzes post context, generates captions using generative AI, and responds with relevant memes automatically. The system combines a Node.js daemon with a Flask backend for AI processing.",
     "image": "/images/projects/memecasso.jpg",
-    "technologies": [
-      "React",
-      "Python",
-      "Flask",
-      "OpenAI API",
-      "MongoDB",
-      "Docker"
-    ],
+    "technologies": ["Node.js", "Flask", "MongoDB", "Gemini", "ImageFlip API"],
     "features": [
-      "AI-powered meme text generation",
-      "Vast library of meme templates",
-      "Custom meme creation with user inputs",
-      "Social sharing capabilities",
-      "Community-driven meme voting system"
+      "Context-aware meme generation using AI",
+      "Automated replies to social media posts",
+      "Backend image generation using ImageFlip API",
+      "Daemon-based architecture for continuous monitoring",
+      "Fully autonomous, no manual moderation required"
     ],
     "github": "https://github.com/Gaurav-45/MemeCasso",
-    "live": null,
-    "category": "AI/ML",
+    "live": "https://bsky.app/profile/did:plc:hihp6s2onmvyqpk5h3xtocs7",
+    "category": "AI / Automation",
     "featured": true
   },
   {
     "id": "3",
-    "title": "Paathshala - E-Learning Platform",
-    "description": "A comprehensive e-learning platform connecting students with quality educational content. Features interactive courses, assessments, and progress tracking.",
-    "longDescription": "Paathshala is an innovative learning management system designed to make education accessible. It includes video lectures, quizzes, assignments, and a robust progress tracking system for both students and instructors.",
+    "title": "Paathshala – E-Learning Platform",
+    "description": "A full-stack e-learning platform with course purchases, progress tracking, and automated notifications.",
+    "longDescription": "Paathshala is a learning management platform that enables users to browse courses, purchase content, track progress, and receive automated email notifications. It is built with a scalable backend and modern frontend architecture.",
     "image": "/images/projects/paathshala.jpg",
     "technologies": [
       "React",
       "Node.js",
       "Express",
       "MongoDB",
-      "Socket.io",
-      "AWS S3"
+      "Docker",
+      "Razorpay API"
     ],
     "features": [
-      "Interactive video courses with subtitles",
-      "Real-time quiz system with instant feedback",
-      "Progress tracking and certificates",
-      "Discussion forums for collaborative learning",
-      "Admin dashboard for course management"
+      "User authentication and course enrollment",
+      "Paid course purchases using Razorpay",
+      "Video and lesson completion tracking",
+      "Automated email notifications",
+      "Admin-side course management"
     ],
     "github": "https://github.com/Gaurav-45/Paathshala",
-    "live": null,
+    "live": "https://igot-coursera-noem.vercel.app/",
     "category": "Education",
     "featured": true
   }

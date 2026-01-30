@@ -12,7 +12,7 @@ export default function About() {
   const stats = [
     { label: "Years Experience", value: "2.5+" },
     { label: "Projects Completed", value: "15+" },
-    { label: "Hackathons Won", value: "3" },
+    { label: "Hackathons Won", value: "4" },
     { label: "Technologies", value: "20+" },
   ];
 

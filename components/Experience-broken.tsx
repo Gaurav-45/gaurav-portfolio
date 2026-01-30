@@ -23,8 +23,12 @@ export default function Experience() {
           </h2>
           <div className="w-20 h-1 bg-gradient-to-r from-primary-500 to-accent-purple mx-auto mb-16"></div>
 
+          {/* Mobile and Desktop Timeline */}
           <div className="relative">
+            {/* Desktop Timeline - Centered vertical line */}
             <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary-500 via-accent-purple to-accent-green"></div>
+
+            {/* Mobile Timeline - Left side */}
             <div className="md:hidden absolute left-4 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary-500 via-accent-purple to-accent-green"></div>
 
             <div className="space-y-12">
@@ -36,6 +40,7 @@ export default function Experience() {
                   animate={isInView ? { opacity: 1, x: 0 } : {}}
                   transition={{ duration: 0.6, delay: index * 0.2 }}
                 >
+                  {/* Timeline Dot */}
                   <motion.div
                     className="absolute left-4 md:left-1/2 top-8 w-4 h-4 bg-primary-500 rounded-full border-4 border-black transform -translate-x-1/2 z-10"
                     initial={{ scale: 0 }}
@@ -44,11 +49,13 @@ export default function Experience() {
                     whileHover={{ scale: 1.5 }}
                   />
 
+                  {/* Content Container - Alternating sides on desktop */}
                   <div
                     className={`md:grid md:grid-cols-2 md:gap-8 ${
                       index % 2 === 0 ? "" : "md:grid-flow-col-dense"
                     }`}
                   >
+                    {/* Left/Right Content */}
                     <div
                       className={`${
                         index % 2 === 0 ? "md:col-start-1" : "md:col-start-2"
@@ -64,6 +71,7 @@ export default function Experience() {
                         }}
                         transition={{ duration: 0.3 }}
                       >
+                        {/* Header */}
                         <div className="flex items-start justify-between mb-4 flex-wrap gap-2">
                           <div className="flex-1">
                             <h3 className="text-2xl font-bold text-white mb-2">
@@ -89,35 +97,40 @@ export default function Experience() {
                           </span>
                         </div>
 
+                        {/* Description */}
                         <p className="text-gray-300 mb-4 leading-relaxed">
                           {exp.description}
                         </p>
 
+                        {/* Responsibilities */}
                         <div className="mb-4">
                           <h4 className="text-white font-semibold mb-3 text-sm uppercase tracking-wider">
                             Key Highlights
                           </h4>
                           <ul className="space-y-2">
-                            {exp.responsibilities.map((resp, idx) => (
-                              <motion.li
-                                key={idx}
-                                className="text-gray-400 text-sm flex items-start"
-                                initial={{ opacity: 0, x: -20 }}
-                                animate={isInView ? { opacity: 1, x: 0 } : {}}
-                                transition={{
-                                  duration: 0.4,
-                                  delay: index * 0.2 + 0.4 + idx * 0.1,
-                                }}
-                              >
-                                <span className="text-primary-400 mr-2 mt-1">
-                                  ▹
-                                </span>
-                                <span>{resp}</span>
-                              </motion.li>
-                            ))}
+                            {exp.responsibilities
+                              .slice(0, 3)
+                              .map((resp, idx) => (
+                                <motion.li
+                                  key={idx}
+                                  className="text-gray-400 text-sm flex items-start"
+                                  initial={{ opacity: 0, x: -20 }}
+                                  animate={isInView ? { opacity: 1, x: 0 } : {}}
+                                  transition={{
+                                    duration: 0.4,
+                                    delay: index * 0.2 + 0.4 + idx * 0.1,
+                                  }}
+                                >
+                                  <span className="text-primary-400 mr-2 mt-1">
+                                    ▹
+                                  </span>
+                                  <span>{resp}</span>
+                                </motion.li>
+                              ))}
                           </ul>
                         </div>
 
+                        {/* Technologies */}
                         <div className="flex flex-wrap gap-2">
                           {exp.technologies.map((tech, idx) => (
                             <motion.span
@@ -141,6 +154,7 @@ export default function Experience() {
                       </motion.div>
                     </div>
 
+                    {/* Spacer for opposite side */}
                     <div
                       className={`hidden md:block ${
                         index % 2 === 0 ? "md:col-start-2" : "md:col-start-1"

@@ -3,7 +3,8 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef, useState } from "react";
-import { FaGithub, FaExternalLinkAlt, FaStar } from "react-icons/fa";
+import { FaGithub, FaStar, FaRocket } from "react-icons/fa";
+import { HiExternalLink } from "react-icons/hi";
 import projectsData from "@/data/projects.json";
 
 export default function Projects() {
@@ -38,7 +39,7 @@ export default function Projects() {
           <div className="w-20 h-1 bg-gradient-to-r from-primary-500 to-accent-purple mx-auto mb-8"></div>
           <p className="text-gray-400 text-center max-w-2xl mx-auto mb-12">
             A collection of my recent work showcasing expertise in full-stack
-            development, blockchain technology, and innovative problem-solving
+            development, and innovative problem-solving
           </p>
 
           {/* Filter Buttons */}
@@ -117,13 +118,13 @@ export default function Projects() {
                       {project.technologies.slice(0, 4).map((tech, idx) => (
                         <span
                           key={idx}
-                          className="px-2 py-1 bg-gray-700/50 text-gray-300 rounded text-xs border border-gray-600/30"
+                          className="px-3 py-1.5 bg-gradient-to-r from-gray-700/50 to-gray-800/50 text-gray-300 rounded-lg text-xs font-medium border border-gray-600/30 hover:border-primary-500/50 hover:text-primary-400 transition-all"
                         >
                           {tech}
                         </span>
                       ))}
                       {project.technologies.length > 4 && (
-                        <span className="px-2 py-1 text-primary-400 text-xs font-semibold">
+                        <span className="px-3 py-1.5 text-primary-400 text-xs font-semibold">
                           +{project.technologies.length - 4}
                         </span>
                       )}
@@ -136,10 +137,11 @@ export default function Projects() {
                           href={project.github}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="flex items-center text-gray-400 hover:text-primary-400 transition-colors"
-                          whileHover={{ scale: 1.1 }}
+                          className="flex items-center gap-1.5 px-3 py-1.5 bg-gray-700/30 border border-gray-600/30 rounded-lg text-gray-300 hover:text-white hover:bg-gray-700/50 hover:border-gray-500/50 transition-all font-medium"
+                          whileHover={{ scale: 1.05, y: -2 }}
                         >
-                          <FaGithub className="mr-1" /> Code
+                          <FaGithub className="text-sm" />
+                          <span>Code</span>
                         </motion.a>
                       )}
                       {project.live && (
@@ -147,10 +149,11 @@ export default function Projects() {
                           href={project.live}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="flex items-center text-gray-400 hover:text-primary-400 transition-colors"
-                          whileHover={{ scale: 1.1 }}
+                          className="flex items-center gap-1.5 px-3 py-1.5 bg-gradient-to-r from-primary-500/10 to-accent-purple/10 border border-primary-500/30 rounded-lg text-primary-400 hover:bg-primary-500/20 hover:border-primary-500/50 transition-all font-medium"
+                          whileHover={{ scale: 1.05, y: -2 }}
                         >
-                          <FaExternalLinkAlt className="mr-1" /> Live Demo
+                          <FaRocket className="text-sm" />
+                          <span>Live Demo</span>
                         </motion.a>
                       )}
                     </div>

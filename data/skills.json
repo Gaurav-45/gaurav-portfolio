@@ -14,6 +14,11 @@
           "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg"
         },
         {
+          "name": "Angular",
+          "level": 82,
+          "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg"
+        },
+        {
           "name": "TypeScript",
           "level": 88,
           "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
@@ -25,22 +30,17 @@
         },
         {
           "name": "Tailwind CSS",
-          "level": 90,
-          "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg"
+          "level": 85,
+          "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg"
         },
         {
-          "name": "HTML5",
-          "level": 95,
-          "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
-        },
-        {
-          "name": "CSS3",
-          "level": 90,
-          "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+          "name": "Storybook",
+          "level": 85,
+          "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/storybook/storybook-original.svg"
         },
         {
           "name": "Redux",
-          "level": 80,
+          "level": 78,
           "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg"
         }
       ]
@@ -60,28 +60,23 @@
         },
         {
           "name": "Java",
-          "level": 80,
+          "level": 82,
           "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"
         },
         {
           "name": "Spring Boot",
-          "level": 75,
+          "level": 78,
           "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg"
         },
         {
           "name": "Python",
-          "level": 82,
+          "level": 80,
           "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
         },
         {
           "name": "Flask",
           "level": 78,
           "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg"
-        },
-        {
-          "name": "GraphQL",
-          "level": 75,
-          "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/graphql/graphql-plain.svg"
         }
       ]
     },
@@ -100,18 +95,8 @@
         },
         {
           "name": "MySQL",
-          "level": 80,
+          "level": 78,
           "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
-        },
-        {
-          "name": "Redis",
-          "level": 75,
-          "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg"
-        },
-        {
-          "name": "Prisma",
-          "level": 80,
-          "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/prisma/prisma-original.svg"
         }
       ]
     },
@@ -120,7 +105,7 @@
       "skills": [
         {
           "name": "AWS",
-          "level": 80,
+          "level": 82,
           "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg"
         },
         {
@@ -130,7 +115,7 @@
         },
         {
           "name": "Kubernetes",
-          "level": 70,
+          "level": 68,
           "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg"
         },
         {
@@ -145,7 +130,7 @@
         },
         {
           "name": "Vercel",
-          "level": 85,
+          "level": 80,
           "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vercel/vercel-original.svg"
         }
       ]
